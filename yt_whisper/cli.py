@@ -67,7 +67,7 @@ def get_audio(urls):
     temp_dir = tempfile.gettempdir()
 
     ydl = yt_dlp.YoutubeDL({
-        'quiet': True,
+        'quiet': False,
         'ignoreerrors': True,
         'allow_unplayable_formats': True,
         'ignore_no_formats_error': True,
