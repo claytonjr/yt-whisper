@@ -69,7 +69,9 @@ def get_audio(urls):
     ydl = yt_dlp.YoutubeDL({
         'quiet': True,
         'ignoreerrors': True,
-        'verbose': False,
+        'allow_unplayable_formats': True,
+        'ignore_no_formats_error': True,
+        'verbose': True,
         'format': 'bestaudio',
         "outtmpl": os.path.join(temp_dir, "%(id)s.%(ext)s"),
         'postprocessors': [{'preferredcodec': 'mp3', 'preferredquality': '192', 'key': 'FFmpegExtractAudio', }],
