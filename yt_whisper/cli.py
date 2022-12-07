@@ -68,6 +68,7 @@ def get_audio(urls):
 
     ydl = yt_dlp.YoutubeDL({
         'quiet': True,
+        'ignoreerrors': True,
         'verbose': False,
         'format': 'bestaudio',
         "outtmpl": os.path.join(temp_dir, "%(id)s.%(ext)s"),
